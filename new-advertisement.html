@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/selectCategory.js"></script>
+    <script defer src="js/uploadImages.js"></script>
+    <script defer src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="container">
+          <nav class="header-top--left">
+            <ul class="header-top--nav-lists">
+              <li>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="tel:(+994) 70 256 24 89">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                  (+994) 70 256 24 89
+                </a>
+              </li>
+              <li>
+                <a href=""> Yardım və dəstək </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header-top--right">
+            <ul>
+              <li>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-users "></use>
+                  </svg>
+                  Giriş
+                </a>
+              </li>
+              <li>
+                <a href=""> Qeydiyyat </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <div class="logo-container">
+            <a href="index.html" class="logo"> Logo </a>
+          </div>
+          <div class="header-search">
+            <div class="header-bottom--category">
+              <span class="toggle">
+                <svg class="toggle-icon toggle-open active">
+                  <use xlink:href="img/sprite.svg#icon-list"></use>
+                </svg>
+                <svg class="toggle-icon toggle-close">
+                  <use xlink:href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </span>
+              <span class="header-search--category">Kateqoriya seçin</span>
+            </div>
+            <form action="" class="header-search--form">
+              <input
+                name="search-input"
+                id="search-input"
+                type="text"
+                placeholder="Axtaracağınız məhsul elanının kateqoriyasını yazın"
+              />
+              <button
+                class="input-btn"
+                type="submit"
+                class="header-search--btn"
+              >
+                <svg class="icon">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="wishlist">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-heart"></use>
+            </svg>
+            <span>Seçilənlər</span>
+          </div>
+          <button class="btn-add">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-plus"></use>
+            </svg>
+            <span>Yeni elan</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="input-result-container">
+        <div class="select-menu">
+          <div class="select-btn">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-location"></use>
+            </svg>
+            <span class="select-city">Şəhər əlavə edin</span>
+          </div>
+          <ul class="options">
+            <li class="option">Bakı</li>
+            <li class="option">Gəncə</li>
+            <li class="option">Mingəçevir</li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <div class="searches">
+          <h3>Ən son axtarılanlar</h3>
+          <div class="last-searches"></div>
+        </div>
+
+        <hr />
+
+        <div class="related-results">
+          <h3>Əlaqəli nəticələr</h3>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="modal">
+        <div class="modal-content">
+          <div class="container">
+            <nav class="modal-navigation">
+              <ul>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-home"></use>
+                  </svg>
+                  <span>Ev və bağ</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-tv"></use>
+                  </svg>
+                  <span>Elektronika və texnika</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-office"></use>
+                  </svg>
+                  <span>Daşınmaz əmlak</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+
+                  <ul class="list-contents">
+                    <li>
+                      <a href="">Mənzillər</a>
+                    </li>
+                    <li>
+                      <a href="">Villalar</a>
+                    </li>
+                    <li>
+                      <a href=""> Qarajlar </a>
+                    </li>
+                    <li>
+                      <a href=""> Bağ evləri </a>
+                    </li>
+                    <li>
+                      <a href="">Obyekt və ofislər</a>
+                    </li>
+                    <li>
+                      <a href=""> Torpaq sahələri </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-automobile"></use>
+                  </svg>
+                  <span>Nəqliyyat</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+
+                  <ul class="list-contents">
+                    <li>
+                      <a href="">Ehtiyyat hissələri və aksessuarlar</a>
+                    </li>
+                    <li>
+                      <a href="">Villalar</a>
+                    </li>
+                    <li>
+                      <a href=""> Qarajlar </a>
+                    </li>
+                    <li>
+                      <a href=""> Bağ evləri </a>
+                    </li>
+                    <li>
+                      <a href="">Obyekt və ofislər</a>
+                    </li>
+                    <li>
+                      <a href=""> Torpaq sahələri </a>
+                    </li>
+                  </ul>
+
+                  <!-- Ehtiyat hissələri və aksesuarlar(92001)Avtomobillər(6449)Motosikletlər və mopedlər(1200)Tikinti texnikası(690)Yük maşınları və qoşqular(614)Aqrotexnika(453)Su nəqliyyatı(136)Avtobuslar(22) -->
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-toys"></use>
+                  </svg>
+                  <span>Şəxsi əşyalar</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-child_care"></use>
+                  </svg>
+                  <span>Hobbi və asudə</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-paw"></use>
+                  </svg>
+                  <span>Heyvanlar</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-shopping-bag"></use>
+                  </svg>
+                  <span>Vakansiyalar</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+
+                  <ul class="list-contents">
+                    <li>
+                      <a href="">Vakansiyalar</a>
+                    </li>
+                    <li>
+                      <a href="">Villalar</a>
+                    </li>
+                    <li>
+                      <a href=""> Qarajlar </a>
+                    </li>
+                    <li>
+                      <a href=""> Bağ evləri </a>
+                    </li>
+                    <li>
+                      <a href="">Obyekt və ofislər</a>
+                    </li>
+                    <li>
+                      <a href=""> Torpaq sahələri </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-wrench"></use>
+                  </svg>
+                  <span>Digər xidmətlər</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+              </ul>
+            </nav>
+            <div class="modal-content--right">
+              <h1>Populyar axtarışlar</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section-new-advertisement">
+        <div class="container">
+          <h1>Yeni elan yarat</h1>
+
+          <div class="rules">
+            <h2>Qaydalarımız</h2>
+            <h3>1. &nbsp;eyni elanı bir neçə dəfə təqdim etməyin</h3>
+            <h3>
+              2. &nbsp; “Şəkil” lərinizdə telefon nömrələri, e-mail və ya sayt
+              ünvanları qeyd etməyin. Onları “şəxsi məlumatlar” bölməsində qeyd
+              edə bilərsiniz
+            </h3>
+            <h3>
+              3. &nbsp; “Elanın adı” bölməsində qiyməti daxil etməyin. Qiymət
+              üçün sizə ayırdığımız bölməmiz var
+            </h3>
+            <h3>
+              4. &nbsp;<a href="">Qadağan olunmuş məhsullar</a>ın siyahısı
+            </h3>
+            <h3>5. &nbsp;<a href="">Saytın tam qaydaları</a></h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-newAdv-form">
+        <div class="container">
+          <form action="" class="new-adv--form">
+            <h1>Şəxsi məlumatlar</h1>
+            <div class="new-adv--personalInfo">
+              <label for="fullName"
+                >Ad Soyad
+
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  placeholder="Aynur Mustafazadə"
+                />
+              </label>
+
+              <label for="phoneNumber">
+                Telefon nömrəniz
+                <div class="new-adv--personalInfo_phone">
+                  <select name="" id="">
+                    <option value="">(+994) 50</option>
+                    <option value="">(+994) 51</option>
+                    <option value="">(+994) 55</option>
+                    <option value="">(+994) 70</option>
+                    <option value="">(+994) 77</option>
+                  </select>
+                  <input
+                    type="text"
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    placeholder="555 55 55"
+                  />
+                </div>
+              </label>
+              <label for="email"
+                >Email
+
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="example@example.com"
+                />
+              </label>
+
+              <label for="wpNumber">
+                Whatsapp nömrəniz
+                <div class="new-adv--personalInfo_phone">
+                  <select name="" id="">
+                    <option value="">(+994) 50</option>
+                    <option value="">(+994) 51</option>
+                    <option value="">(+994) 55</option>
+                    <option value="">(+994) 70</option>
+                    <option value="">(+994) 77</option>
+                  </select>
+                  <input
+                    type="text"
+                    name="wpNumber"
+                    id="wpNumber"
+                    placeholder="555 55 55"
+                  />
+                </div>
+              </label>
+            </div>
+            <h1>Məhsul haqqında məlumatlar</h1>
+            <div class="new-adv--personalInfo">
+              <label class="product-name--label" for="productName">
+                <span>
+                  Elanın adı
+                  <small>?</small>
+                </span>
+
+                <input
+                  class="product-name--input"
+                  type="text"
+                  name="productName"
+                  id="productName"
+                  placeholder="Məhsul adı daxil edin"
+                />
+              </label>
+
+              <div class="select-menu-category">
+                Kateqoriya
+
+                <nav class="cat-navigation">
+                  <label for="btn">
+                    <div class="product-type">
+                      <span class="cat-value">Kateqoriya secin</span>
+                      <svg class="category-icon">
+                        <use
+                          xlink:href="img/sprite2.svg#icon-cheveron-down"
+                        ></use>
+                      </svg>
+                    </div>
+                  </label>
+                  <input type="checkbox" id="btn" />
+
+                  <ul class="menus">
+                    <li>
+                      <label for="btn-1">
+                        <div class="product-type">
+                          Menzil
+                          <svg class="category-icon">
+                            <use
+                              xlink:href="img/sprite2.svg#icon-cheveron-down"
+                            ></use>
+                          </svg>
+                        </div>
+                      </label>
+                      <input type="checkbox" id="btn-1" />
+                      <ul class="submenus">
+                        <li class="sub-cat">Mebellər</li>
+                        <li class="sub-cat">
+                          Qab qacaq və mətbəx ləvazimatları
+                        </li>
+                        <li class="sub-cat">Ev tekstili</li>
+                        <li class="sub-cat">Bitkilər</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <label for="btn-2">
+                        <div class="product-type">
+                          Ev və bağ
+
+                          <svg class="category-icon">
+                            <use
+                              xlink:href="img/sprite2.svg#icon-cheveron-down"
+                            ></use>
+                          </svg>
+                        </div>
+                      </label>
+                      <input type="checkbox" id="btn-2" />
+
+                      <ul>
+                        <li class="sub-cat">Mebellər</li>
+                        <li class="sub-cat">
+                          Qab qacaq və mətbəx ləvazimatları
+                        </li>
+                        <li class="sub-cat">Ev tekstili</li>
+                        <li class="sub-cat">Bitkilər</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <label for="subCategory"
+                >Alt kateqoriya
+
+                <input type="text" name="subCategory" id="subCategory" />
+                <svg class="adv-icon">
+                  <use xlink:href="img/sprite2.svg#icon-cheveron-down"></use>
+                </svg>
+              </label>
+              <label for="city"
+                >Şəhər
+
+                <input type="text" name="city" id="city" />
+                <svg class="adv-icon">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </label>
+
+              <label for="">
+                Vəziyyəti
+                <select class="select-secondhand" name="" id="">
+                  <option value="">Yeni</option>
+                  <option value="">İşlənmiş</option>
+                </select>
+              </label>
+
+              <label for="price"
+                >Qiymət
+
+                <input type="text" name="price" id="price" />
+                <span class="currency">₼</span>
+              </label>
+
+              <label for="description">
+                Ətraflı məlumat
+                <textarea
+                  name=""
+                  id="description"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </label>
+
+              <label for="url" class="video-label">
+                Video (Youtube, Vimeo)
+                <input
+                  type="text"
+                  name="url"
+                  id="url"
+                  placeholder="Url olaraq yüklə"
+                />
+                <span class="currency">yüklə</span>
+              </label>
+            </div>
+          </form>
+
+          <div class="imgupload-label">
+            <span class="label-span">
+              Şəkil
+              <small class="label-small">?</small>
+            </span>
+          </div>
+          <div class="uploads-img">
+            <div class="choose-img">
+              <label for="img-file">
+                <svg>
+                  <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </svg>
+                Maksimum 5 şəkil əlavə edə bilərsiniz
+              </label>
+              <input type="file" id="img-file" />
+            </div>
+            <div class="image-container"></div>
+          </div>
+          <button type="submit" class="adv-btn btn-add">Elan yerləşdir</button>
+        </div>
+      </section>
+
+      <div class="test-imgCont"></div>
+      <img src="" class="img-show" alt="" />
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="" class="logo">Logo</a>
+          <button class="btn-add">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-plus"></use>
+            </svg>
+            <span>Elan yerləşdirin</span>
+          </button>
+        </div>
+        <div class="footer-main">
+          <div class="footer-main--info">
+            <div>
+              <span>
+                <svg class="icon">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+              </span>
+
+              (+994) 70 256 24 89
+            </div>
+            <div>
+              <span>
+                <svg class="icon">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </span>
+
+              example@az
+            </div>
+            <div>
+              <svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+              <svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer-main--category">
+            <h2 class="footer-main--title">Kateqoriyalar</h2>
+            <nav>
+              <ul>
+                <li>
+                  <a href="">Daşınmaz əmlak</a>
+                </li>
+                <li>
+                  <a href="">Nəqliyyat</a>
+                </li>
+                <li>
+                  <a href="">Ev və bağ üçün</a>
+                </li>
+                <li>
+                  <a href="">Xidmətlər</a>
+                </li>
+                <li>
+                  <a href="">Şəxsi əşyalar</a>
+                </li>
+                <li>
+                  <a href="">Uşaq aləmi</a>
+                </li>
+                <li>
+                  <a href="">Elektronika və texnika</a>
+                </li>
+                <li>
+                  <a href="">Heyvanlar</a>
+                </li>
+                <li>
+                  <a href="">Hobb, asudə, idman</a>
+                </li>
+                <li>
+                  <a href="">Biznes </a>
+                </li>
+                <li>
+                  <a href="">Vakansiyalar</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-main--support">
+            <h2 class="footer-main--title">Kömək</h2>
+            <nav>
+              <ul>
+                <li>
+                  <a href="">Elanlar</a>
+                </li>
+                <li>
+                  <a href="">Yardım və dəstək</a>
+                </li>
+                <li>
+                  <a href="">Qaydalar</a>
+                </li>
+                <li>
+                  <a href="">İstifadəçi razılaşması</a>
+                </li>
+                <li>
+                  <a href="">Məxfilik siyasəti</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Bütün hüquqlar qorunur 2023</span>
+          <span>Site by Jedai</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

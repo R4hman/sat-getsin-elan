@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script defer src="js/searchValue.js"></script> -->
+    <script defer src="js/displayAdv.js"></script>
+    <script defer src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="container">
+          <nav class="header-top--left">
+            <ul class="header-top--nav-lists">
+              <li>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="tel:(+994) 70 256 24 89">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                  (+994) 70 256 24 89
+                </a>
+              </li>
+              <li>
+                <a href=""> Yardım və dəstək </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header-top--right">
+            <ul>
+              <li>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-users "></use>
+                  </svg>
+                  Giriş
+                </a>
+              </li>
+              <li>
+                <a href=""> Qeydiyyat </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <div class="logo-container">
+            <a href="" class="logo"> Logo </a>
+          </div>
+          <div class="header-search">
+            <div class="header-bottom--category">
+              <span class="toggle">
+                <svg class="toggle-icon toggle-open active">
+                  <use xlink:href="img/sprite.svg#icon-list"></use>
+                </svg>
+                <svg class="toggle-icon toggle-close">
+                  <use xlink:href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </span>
+              <span class="header-search--category">Kateqoriya seçin</span>
+            </div>
+            <form action="" class="header-search--form">
+              <input
+                name="search-input"
+                id="search-input"
+                type="text"
+                placeholder="Axtaracağınız məhsul elanının kateqoriyasını yazın"
+              />
+              <button
+                class="input-btn"
+                type="submit"
+                class="header-search--btn"
+              >
+                <svg class="icon">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="wishlist">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-heart"></use>
+            </svg>
+            <span>Seçilənlər</span>
+          </div>
+          <button class="btn-add">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-plus"></use>
+            </svg>
+            <span>Yeni elan</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="input-result-container">
+        <div class="select-menu">
+          <div class="select-btn">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-location"></use>
+            </svg>
+            <span class="select-city">Şəhər əlavə edin</span>
+          </div>
+          <ul class="options">
+            <li class="option">Bakı</li>
+            <li class="option">Gəncə</li>
+            <li class="option">Mingəçevir</li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <div class="searches">
+          <h3>Ən son axtarılanlar</h3>
+          <div class="last-searches"></div>
+        </div>
+
+        <hr />
+
+        <div class="related-results">
+          <h3>Əlaqəli nəticələr</h3>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="modal">
+        <div class="modal-content">
+          <div class="container">
+            <nav class="modal-navigation">
+              <ul>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-home"></use>
+                  </svg>
+                  <span>Ev və bağ</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-tv"></use>
+                  </svg>
+                  <span>Elektronika və texnika</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-office"></use>
+                  </svg>
+                  <span>Daşınmaz əmlak</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+
+                  <ul class="list-contents">
+                    <li>
+                      <a href="">Mənzillər</a>
+                    </li>
+                    <li>
+                      <a href="">Villalar</a>
+                    </li>
+                    <li>
+                      <a href=""> Qarajlar </a>
+                    </li>
+                    <li>
+                      <a href=""> Bağ evləri </a>
+                    </li>
+                    <li>
+                      <a href="">Obyekt və ofislər</a>
+                    </li>
+                    <li>
+                      <a href=""> Torpaq sahələri </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-automobile"></use>
+                  </svg>
+                  <span>Nəqliyyat</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+
+                  <ul class="list-contents">
+                    <li>
+                      <a href="">Ehtiyyat hissələri və aksessuarlar</a>
+                    </li>
+                    <li>
+                      <a href="">Villalar</a>
+                    </li>
+                    <li>
+                      <a href=""> Qarajlar </a>
+                    </li>
+                    <li>
+                      <a href=""> Bağ evləri </a>
+                    </li>
+                    <li>
+                      <a href="">Obyekt və ofislər</a>
+                    </li>
+                    <li>
+                      <a href=""> Torpaq sahələri </a>
+                    </li>
+                  </ul>
+
+                  <!-- Ehtiyat hissələri və aksesuarlar(92001)Avtomobillər(6449)Motosikletlər və mopedlər(1200)Tikinti texnikası(690)Yük maşınları və qoşqular(614)Aqrotexnika(453)Su nəqliyyatı(136)Avtobuslar(22) -->
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-toys"></use>
+                  </svg>
+                  <span>Şəxsi əşyalar</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-child_care"></use>
+                  </svg>
+                  <span>Hobbi və asudə</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-paw"></use>
+                  </svg>
+                  <span>Heyvanlar</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-shopping-bag"></use>
+                  </svg>
+                  <span>Vakansiyalar</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+
+                  <ul class="list-contents">
+                    <li>
+                      <a href="">Vakansiyalar</a>
+                    </li>
+                    <li>
+                      <a href="">Villalar</a>
+                    </li>
+                    <li>
+                      <a href=""> Qarajlar </a>
+                    </li>
+                    <li>
+                      <a href=""> Bağ evləri </a>
+                    </li>
+                    <li>
+                      <a href="">Obyekt və ofislər</a>
+                    </li>
+                    <li>
+                      <a href=""> Torpaq sahələri </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-wrench"></use>
+                  </svg>
+                  <span>Digər xidmətlər</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+              </ul>
+            </nav>
+            <div class="modal-content--right">
+              <h1>Populyar axtarışlar</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-category">
+        <div class="container">
+          <h1 class="section-title">Kateqoriya seçin</h1>
+          <div class="category-lists">
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/Frame 47380.png" alt="" />
+              </div>
+              <h3>Daşınmaz əmlak</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/cadillac.png" alt="" />
+              </div>
+              <h3>Nəqliyyat</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/flowerset.png" alt="" />
+              </div>
+              <h3>Ev və bağ üçün</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/engineer.png" alt="" />
+              </div>
+              <h3>Xidmətlər</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/dress.png" alt="" />
+              </div>
+              <h3>Moda və still</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/kidsplay.png" alt="" />
+              </div>
+              <h3>Uşaq aləmi</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/domestictools.png" alt="" />
+              </div>
+              <h3>Elektronika və texnika</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/dogs.png" alt="" />
+              </div>
+              <h3>Heyvanlar</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/baseball.png" alt="" />
+              </div>
+              <h3>Hobbi, idman, asudə</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/bag.png" alt="" />
+              </div>
+              <h3>Biznes</h3>
+            </div>
+            <div class="category-list">
+              <div class="category-list--img-container">
+                <img src="img/couple.png" alt="" />
+              </div>
+              <h3>Vakansiyalar</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-premium">
+        <div class="container">
+          <div class="premium-header">
+            <h1 class="section-title">Premium elanlar</h1>
+            <div class="dropdown dropdown-latest">
+              <button class="dropbtn">
+                <span>Sıralama</span>
+                <svg class="dropdown-icon">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down2"></use>
+                </svg>
+              </button>
+              <div class="dropdown-content content-latest">
+                <span data-id="content-new">Ən yenilər</span>
+                <span data-id="expensive">Bahalıdan ucuza</span>
+                <span data-id="cheap">Ucuzdan bahalıya</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="premium-lists">
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-btn-flex">
+            <button class="section-btn">Bütün premium elanları göstər</button>
+          </div>
+        </div>
+      </section>
+      <section class="section-premium section-last-adv">
+        <div class="container">
+          <div class="premium-header">
+            <h1 class="section-title">Ən son elanlar</h1>
+            <div class="dropdown">
+              <button class="dropbtn">
+                <span>Sıralama</span>
+                <svg class="dropdown-icon">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down2"></use>
+                </svg>
+              </button>
+              <div class="dropdown-content">
+                <span>Ən yenilər</span>
+                <span>Bahalıdan ucuza</span>
+                <span>Ucuzdan bahalıya</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="premium-lists">
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+            <div class="premium-card">
+              <div class="premium-card--side card-side--front">
+                <div class="card-img--container">
+                  <img src="img/mainroom.png" alt="" />
+                  <span class="card-icon">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="premium-card--bottom">
+                  <h3>Şirkətə satış meneceri axtarılır</h3>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-location"></use>
+                    </svg>
+                    <span>Bakı</span>
+                  </div>
+                  <div class="card-info">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                    <span>12.04.2023</span>
+                  </div>
+
+                  <span class="card-price">700 ₼</span>
+                </div>
+              </div>
+              <div class="premium-card--side card-side--back">
+                <div class="card-img--container img-back">
+                  <img src="img/crown.png" alt="" />
+                </div>
+                <div class="card-info">
+                  <h2>Elanını premium et</h2>
+                  <div><span>3 ₼</span> / 5 gün</div>
+                  <a href="" class="premium-btn"> Premium et </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-btn-flex">
+            <button class="section-btn">Bütün premium elanları göstər</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-find">
+        <div class="container">
+          <div class="section-find--top">
+            <h1>“Sat Getsin” İstədiyini tez taparaq vaxtına qənaət et</h1>
+            <p>
+              Sərfəli şərtlərlə mənzil almaq istəyirsiz? Avtomobilinizi tez
+              satmağı planlaşdırırsız? Yüksək maaşlı iş axtarırsız? Tut.az
+              Pulsuz Elanlar saytı bu və digər məsələləri həll etmək üçün ideal
+              vasitədir.
+            </p>
+            <p>
+              İstənilən məhsul, xidmət tez bir zamanda satıb, alıb və ya sifariş
+              edə bilərsiz. Sayta hər gün müxtəlif mövzularda yüzlərlə Pulsuz
+              Elanlar əlavə olunur. Istədiyinizi rahat tap az vaxt sərf et –
+              sabaha saxlamayın, elə indi başlayın!
+            </p>
+            <h2>“Sat Getsin” Pulsuz Elanlar Saytının üstünlükləri nələrdir?</h2>
+            <ul>
+              <li>
+                çoxlu sayda mal və xidmət: elektronika və məişət texnikası,
+                daşınmaz əmlak, minik avtomobillər, iş - burada hər zövqə uyğun
+                elan tapa bilərsiniz!
+              </li>
+              <li>
+                böyük auditoriya: Elanızı gündəlik mindən çox insanın ziyarət
+                etdiyi veb saytımızda, həm də partnyorlarımızın - respublikanın
+                aparıcı xəbər saytlarında: Oxu.az, Media.az, Baku.ws və s.
+                yerləşdirə bilərsiz!
+              </li>
+              <li>
+                elanın unikallaşdırılması imkanları. Elanızın həm veb
+                saytımızda, həm də tərəfdaşlarımızın saytlarında başqaları
+                arasında fərqlənməsini istəyirsinizsə, pullu vasitələrdən
+                istifadə edə bilərsiniz.
+              </li>
+            </ul>
+          </div>
+          <div class="section-find--bottom">
+            <h1>Ən məşhur sorğular</h1>
+            <div class="category-links">
+              <a href="" class="category-link">Ev alqı satqısı </a>
+              <a href="" class="category-link">Kirayə evlər </a>
+              <a href="" class="category-link">Maşın elanları </a>
+              <a href="" class="category-link">Ev elanları </a>
+              <a href="" class="category-link">Kirayə </a>
+              <a href="" class="category-link">İş elanları </a>
+              <a href="" class="category-link">İş elanları </a>
+              <a href="" class="category-link">İş elanları </a>
+              <a href="" class="category-link">İş elanları </a>
+              <a href="" class="category-link">İş elanları </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="" class="logo">Logo</a>
+          <button class="btn-add">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-plus"></use>
+            </svg>
+            <span>Elan yerləşdirin</span>
+          </button>
+        </div>
+        <div class="footer-main">
+          <div class="footer-main--info">
+            <div>
+              <span>
+                <svg class="icon">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+              </span>
+
+              (+994) 70 256 24 89
+            </div>
+            <div>
+              <span>
+                <svg class="icon">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </span>
+
+              example@az
+            </div>
+            <div>
+              <svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+              <svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer-main--category">
+            <h2 class="footer-main--title">Kateqoriyalar</h2>
+            <nav>
+              <ul>
+                <li>
+                  <a href="">Daşınmaz əmlak</a>
+                </li>
+                <li>
+                  <a href="">Nəqliyyat</a>
+                </li>
+                <li>
+                  <a href="">Ev və bağ üçün</a>
+                </li>
+                <li>
+                  <a href="">Xidmətlər</a>
+                </li>
+                <li>
+                  <a href="">Şəxsi əşyalar</a>
+                </li>
+                <li>
+                  <a href="">Uşaq aləmi</a>
+                </li>
+                <li>
+                  <a href="">Elektronika və texnika</a>
+                </li>
+                <li>
+                  <a href="">Heyvanlar</a>
+                </li>
+                <li>
+                  <a href="">Hobb, asudə, idman</a>
+                </li>
+                <li>
+                  <a href="">Biznes </a>
+                </li>
+                <li>
+                  <a href="">Vakansiyalar</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-main--support">
+            <h2 class="footer-main--title">Kömək</h2>
+            <nav>
+              <ul>
+                <li>
+                  <a href="">Elanlar</a>
+                </li>
+                <li>
+                  <a href="">Yardım və dəstək</a>
+                </li>
+                <li>
+                  <a href="">Qaydalar</a>
+                </li>
+                <li>
+                  <a href="">İstifadəçi razılaşması</a>
+                </li>
+                <li>
+                  <a href="">Məxfilik siyasəti</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Bütün hüquqlar qorunur 2023</span>
+          <span>Site by Jedai</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

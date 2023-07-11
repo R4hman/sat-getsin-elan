@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/register.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="section-register">
+      <div class="register-container">
+        <div>
+          <h1>Qeydiyyat</h1>
+
+          <form class="signin-form">
+            <label for="userEmail">
+              Email
+
+              <input
+                id="userEmail"
+                type="email"
+                name="userEmail"
+                placeholder="Emailinizi daxil edin"
+              />
+            </label>
+            <label for="userPassword-1">
+              Şifrə
+              <input
+                type="password"
+                placeholder="Yeni şifrə yaradın"
+                id="userPassword-1"
+                name="userPassword-1"
+              />
+              <span class="password-eye eye-active">
+                <svg class="icon">
+                  <use xlink:href="img/sprite3.svg#icon-eye"></use>
+                </svg>
+              </span>
+            </label>
+
+            <label for="phoneNumber">
+              Mobil nömrə
+              <div class="new-adv--personalInfo_phone">
+                <select name="" id="">
+                  <option value="">(+994) 50</option>
+                  <option value="">(+994) 51</option>
+                  <option value="">(+994) 55</option>
+                  <option value="">(+994) 70</option>
+                  <option value="">(+994) 77</option>
+                </select>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  placeholder="555 55 55"
+                />
+              </div>
+            </label>
+            <label for="userPassword-2">
+              Şifrə
+              <input
+                type="password"
+                placeholder="Yeni şifrə yaradın"
+                id="userPassword-2"
+                name="userPassword-2"
+              />
+              <span class="password-eye eye-active">
+                <svg class="icon">
+                  <use xlink:href="img/sprite3.svg#icon-eye"></use>
+                </svg>
+              </span>
+            </label>
+          </form>
+
+          <div class="">
+            <label for="register-remember">
+              <input id="register-remember" type="checkbox" />
+              <span style="color: blue; margin-right: 10px"
+                >Istifadəçi şərtləri</span
+              >ilə razıyam
+            </label>
+          </div>
+          <button type="submit" class="btn-add enter-btn">Daxil ol</button>
+          <h4>Saytımızda yenisiniz? O zaman</h4>
+          <a href="signup.html" class="btn-add register-btn"
+            >Qeydiyyatdan keçin
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

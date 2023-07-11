@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script defer src="js/selectCategory.js"></script>
+    <script defer src="js/uploadImages.js"></script> -->
+    <script
+      defer
+      type="text/javascript"
+      src="https://unpkg.com/default-passive-events"
+    ></script>
+    <!-- <script defer src="js/searchValue.js"></script> -->
+    <script defer src="js/fileModal.js"></script>
+    <script defer src="js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="container">
+          <nav class="header-top--left">
+            <ul class="header-top--nav-lists">
+              <li>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="tel:(+994) 70 256 24 89">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                  (+994) 70 256 24 89
+                </a>
+              </li>
+              <li>
+                <a href=""> Yardım və dəstək </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="header-top--right">
+            <ul>
+              <li>
+                <a href="">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-users "></use>
+                  </svg>
+                  Giriş
+                </a>
+              </li>
+              <li>
+                <a href=""> Qeydiyyat </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <div class="logo-container">
+            <a href="index.html" class="logo"> Logo </a>
+          </div>
+          <div class="header-search">
+            <div class="header-bottom--category">
+              <span class="toggle">
+                <svg class="toggle-icon toggle-open active">
+                  <use xlink:href="img/sprite.svg#icon-list"></use>
+                </svg>
+                <svg class="toggle-icon toggle-close">
+                  <use xlink:href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </span>
+              <span class="header-search--category">Kateqoriya seçin</span>
+            </div>
+            <form action="" class="header-search--form">
+              <input
+                name="search-input"
+                id="search-input"
+                type="text"
+                placeholder="Axtaracağınız məhsul elanının kateqoriyasını yazın"
+              />
+              <button
+                class="input-btn"
+                type="submit"
+                class="header-search--btn"
+              >
+                <svg class="icon">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="wishlist">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-heart"></use>
+            </svg>
+            <span>Seçilənlər</span>
+          </div>
+          <button class="btn-add">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-plus"></use>
+            </svg>
+            <span>Yeni elan</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="input-result-container">
+        <div class="select-menu">
+          <div class="select-btn">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-location"></use>
+            </svg>
+            <span class="select-city">Şəhər əlavə edin</span>
+          </div>
+          <ul class="options">
+            <li class="option">Bakı</li>
+            <li class="option">Gəncə</li>
+            <li class="option">Mingəçevir</li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <div class="searches">
+          <h3>Ən son axtarılanlar</h3>
+          <div class="last-searches"></div>
+        </div>
+
+        <hr />
+
+        <div class="related-results">
+          <h3>Əlaqəli nəticələr</h3>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="modal">
+        <div class="modal-content">
+          <div class="container">
+            <nav class="modal-navigation">
+              <ul>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-home"></use>
+                  </svg>
+                  <span>Ev və bağ</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-tv"></use>
+                  </svg>
+                  <span>Elektronika və texnika</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-office"></use>
+                  </svg>
+                  <span>Daşınmaz əmlak</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+
+                  <ul class="list-contents">
+                    <li>
+                      <a href="">Mənzillər</a>
+                    </li>
+                    <li>
+                      <a href="">Villalar</a>
+                    </li>
+                    <li>
+                      <a href=""> Qarajlar </a>
+                    </li>
+                    <li>
+                      <a href=""> Bağ evləri </a>
+                    </li>
+                    <li>
+                      <a href="">Obyekt və ofislər</a>
+                    </li>
+                    <li>
+                      <a href=""> Torpaq sahələri </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-automobile"></use>
+                  </svg>
+                  <span>Nəqliyyat</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+
+                  <ul class="list-contents">
+                    <li>
+                      <a href="">Ehtiyyat hissələri və aksessuarlar</a>
+                    </li>
+                    <li>
+                      <a href="">Villalar</a>
+                    </li>
+                    <li>
+                      <a href=""> Qarajlar </a>
+                    </li>
+                    <li>
+                      <a href=""> Bağ evləri </a>
+                    </li>
+                    <li>
+                      <a href="">Obyekt və ofislər</a>
+                    </li>
+                    <li>
+                      <a href=""> Torpaq sahələri </a>
+                    </li>
+                  </ul>
+
+                  <!-- Ehtiyat hissələri və aksesuarlar(92001)Avtomobillər(6449)Motosikletlər və mopedlər(1200)Tikinti texnikası(690)Yük maşınları və qoşqular(614)Aqrotexnika(453)Su nəqliyyatı(136)Avtobuslar(22) -->
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-toys"></use>
+                  </svg>
+                  <span>Şəxsi əşyalar</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-child_care"></use>
+                  </svg>
+                  <span>Hobbi və asudə</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-paw"></use>
+                  </svg>
+                  <span>Heyvanlar</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-shopping-bag"></use>
+                  </svg>
+                  <span>Vakansiyalar</span>
+                  <svg class="icon-right">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+
+                  <ul class="list-contents">
+                    <li>
+                      <a href="">Vakansiyalar</a>
+                    </li>
+                    <li>
+                      <a href="">Villalar</a>
+                    </li>
+                    <li>
+                      <a href=""> Qarajlar </a>
+                    </li>
+                    <li>
+                      <a href=""> Bağ evləri </a>
+                    </li>
+                    <li>
+                      <a href="">Obyekt və ofislər</a>
+                    </li>
+                    <li>
+                      <a href=""> Torpaq sahələri </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite1.svg#icon-wrench"></use>
+                  </svg>
+                  <span>Digər xidmətlər</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                  </svg>
+                </li>
+              </ul>
+            </nav>
+            <div class="modal-content--right">
+              <h1>Populyar axtarışlar</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="file-popup">
+        <div class="popup-cover">
+          <span>&times;</span>
+          <!-- <iframe
+            class="single-adv_iframe adv-file show-popup-file"
+            src="https://www.youtube.com/embed/orbkg5JH9C8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe> -->
+          <div class="show-popup-file-container">
+            <iframe
+              class="single-adv_iframe show-popup-file"
+              src="https://www.youtube.com/embed/orbkg5JH9C8"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <img
+              class="show-popup-file"
+              src="https://images.pexels.com/photos/16364335/pexels-photo-16364335/free-photo-of-city-road-landscape-people.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <section class="section-single-adv">
+        <div class="container">
+          <ul class="single-adv_namepath">
+            <li>
+              <a href="" class="namepath">
+                Bütün Kateqoriyalar
+                <svg class="category-icon">
+                  <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="namepath">
+                Bütün Kateqoriyalar
+                <svg class="category-icon">
+                  <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="namepath">
+                Bütün Kateqoriyalar
+                <svg class="category-icon">
+                  <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <!-- <span class="namepath">
+              Bütün Kateqoriyalar
+              <svg class="category-icon">
+                <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+              </svg>
+            </span>
+            <span class="namepath">
+              Şəxsi əşyalar
+              <svg class="category-icon">
+                <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+              </svg>
+            </span>
+            <span class="namepath">
+              aksessuarlar
+              <svg class="category-icon">
+                <use xlink:href="img/sprite2.svg#icon-cheveron-right"></use>
+              </svg>
+            </span> -->
+
+          <div class="single-adv_info">
+            <div class="single-adv_files">
+              <div class="single-adv_main-img-container">
+                <img
+                  src="https://images.pexels.com/photos/16364335/pexels-photo-16364335/free-photo-of-city-road-landscape-people.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                  alt=""
+                  class="single-adv_main-img"
+                />
+                <div class="main-img_share">
+                  <div>
+                    <svg class="icon-category">
+                      <use xlink:href="img/sprite3.svg#icon-share2"></use>
+                    </svg>
+                    <svg class="icon-category">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </div>
+                  <span>280 ₼</span>
+                </div>
+              </div>
+              <div class="single-adv_file-container">
+                <div class="iframe-container adv-file">
+                  <div class="iframe-test-div"></div>
+                  <iframe
+                    class="single-adv_iframe"
+                    src="https://www.youtube.com/embed/orbkg5JH9C8"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <img
+                  src="https://images.pexels.com/photos/4748360/pexels-photo-4748360.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                  alt=""
+                  class="single-adv_second_img adv-file"
+                />
+
+                <img
+                  src="https://images.pexels.com/photos/16364335/pexels-photo-16364335/free-photo-of-city-road-landscape-people.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                  alt=""
+                  class="single-adv_second_img adv-file"
+                />
+
+                <img
+                  src="https://images.pexels.com/photos/16364335/pexels-photo-16364335/free-photo-of-city-road-landscape-people.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                  alt=""
+                  class="single-adv_second_img adv-file"
+                />
+              </div>
+            </div>
+            <div class="single-adv_features">
+              <h1>Qadın qol saatı “Skmei El Luminous”</h1>
+              <div class="adv-spesific">
+                Elan nömrəsi <span class="adv-number">5531589</span>
+                <svg class="icon">
+                  <use xlink:href="img/sprite3.svg#icon-clock2"></use>
+                </svg>
+                <span class="adv-number adv-date">12.02.2022</span>
+                <svg class="icon">
+                  <use xlink:href="img/sprite3.svg#icon-eye"></use>
+                </svg>
+                <span class="adv-number adv-seen">2542313</span>
+              </div>
+              <div class="adv-owner-info">
+                <div class="owner-info-first">
+                  <div class="seller">
+                    Satıcı
+                    <br />
+                    <span class="owner">Rahman Musayev</span>
+                  </div>
+                  <span class="price-offer">Satıcıya qiymət təklif et</span>
+                </div>
+                <div class="owner-numbers">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite3.svg#icon-clock2"></use>
+                  </svg>
+                  <span class="seller-phone">(+994) 50 562 62 32</span>
+                  <svg class="icon">
+                    <use xlink:href="img/sprite3.svg#icon-clock2"></use>
+                  </svg>
+                  <span class="seller-wp">(+994) 50 562 62 32</span>
+                </div>
+              </div>
+              <div class="feature-buttons">
+                <fieldset>
+                  <legend>1 ₼</legend>
+                  <span>Elanı irəli çək</span>
+                </fieldset>
+                <button class="btn-add vip-btn">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  </svg>
+                  Elanı VIP et
+                </button>
+                <button class="btn-add prem-btn">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  </svg>
+                  Elanı Premium et
+                </button>
+              </div>
+
+              <div class="product-features">
+                <div class="product-features_first">
+                  <span class="feature-active" data-id="1"
+                    >Məhsul haqqında</span
+                  >
+                  <span data-id="2">Özəllikləri</span>
+                  <hr />
+                </div>
+                <div class="product-features_second">
+                  <div class="product-toggle" data-id="1">
+                    <h1>
+                      Mexaniki işləyən saat Həmçinin qolda 10 saatdan çox taxılı
+                      qaldıqda qurmağa da ehtiyac yoxdur Avtomatik işləyir
+                    </h1>
+                    <ul>
+                      <li>brend Jaragar yeni yüksək kefiyyətli</li>
+                      <li>Klassik</li>
+                      <li>2 Balaca əqrəb</li>
+                      <li>Feature 4</li>
+                      <li>Feature 5</li>
+                      <li>Klassik</li>
+                      <li>2 Balaca əqrəb</li>
+                      <li>Feature 4</li>
+                      <li>Feature 5</li>
+                    </ul>
+                    <div class="show-more-btn">
+                      <hr />
+                      <span class="show-more">Daha çox göstər</span>
+                      <hr />
+                    </div>
+                  </div>
+                  <div class="product-toggle" style="display: none" data-id="2">
+                    <div class="product-toggle_first">
+                      <span>Şəhər</span>
+                      <span>Bakı</span>
+                    </div>
+                    <div class="product-toggle_second">
+                      <span>Vəziyyəti</span>
+                      <span>İşlənmiş</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="loading">
+        <h1>Yüklənir...</h1>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="" class="logo">Logo</a>
+          <button class="btn-add">
+            <svg class="icon">
+              <use xlink:href="img/sprite.svg#icon-plus"></use>
+            </svg>
+            <span>Elan yerləşdirin</span>
+          </button>
+        </div>
+        <div class="footer-main">
+          <div class="footer-main--info">
+            <div>
+              <span>
+                <svg class="icon">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+              </span>
+
+              (+994) 70 256 24 89
+            </div>
+            <div>
+              <span>
+                <svg class="icon">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </span>
+
+              example@az
+            </div>
+            <div>
+              <svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+              <svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="footer-main--category">
+            <h2 class="footer-main--title">Kateqoriyalar</h2>
+            <nav>
+              <ul>
+                <li>
+                  <a href="">Daşınmaz əmlak</a>
+                </li>
+                <li>
+                  <a href="">Nəqliyyat</a>
+                </li>
+                <li>
+                  <a href="">Ev və bağ üçün</a>
+                </li>
+                <li>
+                  <a href="">Xidmətlər</a>
+                </li>
+                <li>
+                  <a href="">Şəxsi əşyalar</a>
+                </li>
+                <li>
+                  <a href="">Uşaq aləmi</a>
+                </li>
+                <li>
+                  <a href="">Elektronika və texnika</a>
+                </li>
+                <li>
+                  <a href="">Heyvanlar</a>
+                </li>
+                <li>
+                  <a href="">Hobb, asudə, idman</a>
+                </li>
+                <li>
+                  <a href="">Biznes </a>
+                </li>
+                <li>
+                  <a href="">Vakansiyalar</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-main--support">
+            <h2 class="footer-main--title">Kömək</h2>
+            <nav>
+              <ul>
+                <li>
+                  <a href="">Elanlar</a>
+                </li>
+                <li>
+                  <a href="">Yardım və dəstək</a>
+                </li>
+                <li>
+                  <a href="">Qaydalar</a>
+                </li>
+                <li>
+                  <a href="">İstifadəçi razılaşması</a>
+                </li>
+                <li>
+                  <a href="">Məxfilik siyasəti</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Bütün hüquqlar qorunur 2023</span>
+          <span>Site by Jedai</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+@mixin hideIcon {
+  display: none;
+}
+
+@mixin showIcon {
+  display: block;
+}
+
+@mixin flex-gap() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@mixin btn-span($color) {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: $color;
+}
+
+@mixin small-typography-style($fw) {
+  font-size: 14px;
+  font-weight: $fw;
+  line-height: 18px;
+  text-align: left;
+}
+
+@mixin section-style {
+  padding: 3rem 0;
+  background-color: var(--color-section-main);
+}
+
+@mixin find-section-style($col) {
+  color: $col;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}

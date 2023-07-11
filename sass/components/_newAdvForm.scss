@@ -1,0 +1,243 @@
+.new-adv--form {
+  .new-adv--personalInfo {
+    display: flex;
+    // align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10rem;
+    row-gap: 4rem;
+    margin: 3rem 0;
+
+    .product-type {
+      width: 100%;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 37.5rem;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #979ca8;
+      position: relative;
+
+      .adv-icon {
+        width: 20px !important;
+        height: 20px !important;
+        fill: #9a9ca8 !important;
+        font-size: 18px !important;
+        position: absolute;
+        right: 1rem;
+        bottom: 1.5rem;
+      }
+
+      .new-adv--personalInfo_phone {
+        display: flex;
+        select {
+          flex: 1;
+          border: none;
+          outline: none;
+          padding: 1.5rem;
+          border: 1px solid #e7e7e7;
+          border-right: none;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+
+        input {
+          flex: 3;
+          border-left: none;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
+
+      input {
+        border: none;
+        outline: none;
+        padding: 1.5rem;
+        border: 1px solid #e7e7e7;
+
+        &:nth-child(1) {
+          border-radius: 5px !important;
+        }
+        &:nth-child(3) {
+          border-radius: 5px !important;
+        }
+      }
+
+      .currency {
+        position: absolute;
+        top: 4.2rem;
+        right: 1.5rem;
+      }
+
+      textarea {
+        border: none;
+        outline: none;
+        padding: 1.5rem;
+        border: 1px solid #e7e7e7;
+        border-radius: 5px;
+      }
+    }
+
+    .product-name--label {
+      width: 85rem;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-align: center !important;
+
+        small {
+          background-color: #d0d0d2;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          padding: 1rem;
+          display: inline-block;
+          font-size: 18px;
+          // text-align: center !important;
+          margin-top: -1rem;
+          vertical-align: bottom !important;
+          position: relative;
+
+          &::after {
+            content: "Məhsulunuzun qiymətini daxil etməyin.Bunun üçün aşağıda sizə ayırdığımız bölməmiz var";
+            display: inline-block;
+            background-color: #e7eae7;
+            width: 40rem;
+            height: auto;
+            position: absolute;
+            left: 5rem;
+            top: -1rem;
+            padding: 1rem;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0.025em;
+            text-align: left;
+          }
+          &::before {
+            content: "";
+            display: inline-block;
+            background-color: #e7eae7;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            transform: rotate(45deg) !important;
+            left: 4.5rem;
+            top: 0.5rem;
+          }
+        }
+      }
+
+      .product-name--input {
+        border-radius: 5px;
+      }
+    }
+
+    select {
+      width: 37.5rem;
+      border: none;
+      outline: none;
+      padding: 1.5rem;
+      border: 1px solid #e7e7e7;
+      border-radius: 5px;
+      appearance: none;
+      -webkit-appearance: none;
+
+      &::placeholder {
+        color: red !important;
+      }
+
+      &::after {
+        content: "\2304";
+        font-size: 30px;
+        display: inline-block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        line-height: 23px;
+      }
+    }
+
+    .video-label {
+      margin-top: -11.4rem;
+
+      span {
+        border: 1px solid var(--color-btn-main);
+        color: var(--color-btn-main);
+        padding: 0.7rem;
+        border-radius: 5px;
+        margin-top: -0.5rem;
+        display: inline-block;
+
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.imgupload-label {
+  color: #979ca8;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 1rem;
+
+  .label-small {
+    background-color: #d0d0d2;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    padding: 1rem;
+    display: inline-block;
+    font-size: 18px;
+    // text-align: center !important;
+    margin-top: -1rem;
+    vertical-align: bottom !important;
+    position: relative;
+
+    &::after {
+      content: "“Şəkil” lərinizdə telefon nömrələri, e-mail və ya sayt ünvanları qeyd etməyin. Onları “şəxsi məlumatlar” bölməsində daxil etdiniz";
+      display: inline-block;
+      background-color: #e7eae7;
+      width: 40rem;
+      height: auto;
+      position: absolute;
+      left: 5rem;
+      top: -1rem;
+      padding: 1rem;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0.025em;
+      text-align: left;
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      background-color: #e7eae7;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      transform: rotate(45deg) !important;
+      left: 4.5rem;
+      top: 0.5rem;
+    }
+  }
+}

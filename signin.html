@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/register.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="section-register">
+      <div class="register-container">
+        <div>
+          <h1>“Sat Getsin” ə xoş gəlmişsiniz !</h1>
+          <h2>
+            Qeydiyyat zamanı istifadə etdiyiniz e-mail (nömrə) və şifrə
+            vasitəsilə daxil olun
+          </h2>
+          <div class="toggle-register">
+            <span class="active" data-id="0">Email</span>
+            <span class="" data-id="with-number">Mobil nömrə</span>
+          </div>
+          <form class="signin-form">
+            <div class="register-content with-email" data-id="1">
+              <label for="userEmail">
+                Email
+
+                <input
+                  id="userEmail"
+                  type="email"
+                  name="userEmail"
+                  placeholder="Emailinizi daxil edin"
+                />
+              </label>
+              <label for="userPassword-1">
+                Şifrə
+                <input
+                  type="password"
+                  placeholder="Yeni şifrə yaradın"
+                  id="userPassword-1"
+                  name="userPassword-1"
+                />
+                <span class="password-eye eye-active">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite3.svg#icon-eye"></use>
+                  </svg>
+                </span>
+              </label>
+            </div>
+            <div
+              style="display: none"
+              class="register-content with-number"
+              data-id="with-number"
+            >
+              <form class="signin-form">
+                <label for="phoneNumber">
+                  Mobil nömrə
+                  <div class="new-adv--personalInfo_phone">
+                    <select name="" id="">
+                      <option value="">(+994) 50</option>
+                      <option value="">(+994) 51</option>
+                      <option value="">(+994) 55</option>
+                      <option value="">(+994) 70</option>
+                      <option value="">(+994) 77</option>
+                    </select>
+                    <input
+                      type="text"
+                      name="phoneNumber"
+                      id="phoneNumber"
+                      placeholder="555 55 55"
+                    />
+                  </div>
+                </label>
+                <label for="userPassword-2">
+                  Şifrə
+                  <input
+                    type="password"
+                    placeholder="Yeni şifrə yaradın"
+                    id="userPassword-2"
+                    name="userPassword-2"
+                  />
+                  <span class="password-eye eye-active">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite3.svg#icon-eye"></use>
+                    </svg>
+                  </span>
+                </label>
+              </form>
+            </div>
+          </form>
+
+          <div class="remember-me">
+            <label for="register-remember">
+              <input id="register-remember" type="checkbox" />
+              Şifrəni xatırla
+            </label>
+            <a href="signin.html">Şifrəmi unutdum</a>
+          </div>
+          <button type="submit" class="btn-add enter-btn">Daxil ol</button>
+          <h4>Saytımızda yenisiniz? O zaman</h4>
+          <a href="signup.html" class="btn-add register-btn"
+            >Qeydiyyatdan keçin
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
