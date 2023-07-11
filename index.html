@@ -12,8 +12,6 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <!-- <script defer src="js/searchValue.js"></script> -->
-    <script defer src="js/displayAdv.js"></script>
-    <script defer src="js/script.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -107,12 +105,12 @@
             </svg>
             <span>Seçilənlər</span>
           </div>
-          <button class="btn-add">
+          <a href="new-advertisement.html" class="btn-add">
             <svg class="icon">
               <use xlink:href="img/sprite.svg#icon-plus"></use>
             </svg>
             <span>Yeni elan</span>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -392,10 +390,10 @@
                   <use xlink:href="img/sprite.svg#icon-arrow-down2"></use>
                 </svg>
               </button>
-              <div class="dropdown-content content-latest">
-                <span data-id="content-new">Ən yenilər</span>
-                <span data-id="expensive">Bahalıdan ucuza</span>
-                <span data-id="cheap">Ucuzdan bahalıya</span>
+              <div class="dropdown-content">
+                <span>Ən yenilər</span>
+                <span>Bahalıdan ucuza</span>
+                <span>Ucuzdan bahalıya</span>
               </div>
             </div>
           </div>
@@ -926,10 +924,10 @@
                   <use xlink:href="img/sprite.svg#icon-arrow-down2"></use>
                 </svg>
               </button>
-              <div class="dropdown-content">
-                <span>Ən yenilər</span>
-                <span>Bahalıdan ucuza</span>
-                <span>Ucuzdan bahalıya</span>
+              <div class="dropdown-content content-latest">
+                <span data-id="newest">Ən yenilər</span>
+                <span data-id="expensive">Bahalıdan ucuza</span>
+                <span data-id="cheap">Ucuzdan bahalıya</span>
               </div>
             </div>
           </div>
@@ -1615,5 +1613,9 @@
         </div>
       </div>
     </footer>
+
+    s
+    <script src="js/script.js"></script>
+    <script src="js/displayAdv.js"></script>
   </body>
 </html>

@@ -6,7 +6,6 @@ const inputResultContainer = document.querySelector(".input-result-container");
 const headerSearchForm = document.querySelector(".header-search--form");
 const lastSearches = document.querySelector(".last-searches");
 
-//city selection
 const optionMenu = document.querySelector(".select-menu"),
   selectBtn = document.querySelector(".select-btn"),
   options = document.querySelectorAll(".option"),
@@ -170,41 +169,37 @@ function displayRecentSearch() {
 const dropdownLatest = document.querySelector(".dropdown-latest");
 console.log(dropdownLatest);
 
-// document.querySelector(".section-title").addEventListener("click", () => {
-//   console.log("test");
-// });
-
-// console.log("salamdadada");
-
-// dropdownLatest.addEventListener("click", () => {
-//   console.log("yes onmouseover");
-// });
-
-// dropdownLatest.onmousemove = () => {
-//   console.log("yes it is onmouseover");
-// };
-
 const spanFilters = document.querySelectorAll(".content-latest span");
-console.log(spanFilters);
+
 spanFilters.forEach((sp) => {
-  console.log(sp);
+  // console.log(sp);
   sp.addEventListener("click", (e) => {
     console.log(sp.dataset.id);
-    const data = getStorageItem("products");
+    let data = getStorageItem("products");
+
+    if (sp.dataset.id === "newest") {
+      console.log("it is newest");
+      console.log(new Date(data[1].date).getTime());
+      data = data.sort(
+        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+      );
+      console.log(data);
+    }
+    // console.log(data);
+
+    if (sp.dataset.id === "cheap") {
+      data = data.sort((a, b) => +b.price - +a.price);
+    }
+
+    if (sp.dataset.id === "expensive") {
+      data = data.sort((a, b) => +a.price - +b.price);
+    }
+
+    setStorage("products", data);
     console.log(data);
 
-    console.log(data[0].price);
-    console.log(parseFloat(data[0].price));
-    console.log(parseInt(data[0].price, 10));
-
-    const cox = data.sort(
-      (a, b) => parseInt(a.price, 10) - parseInt(b.price, 10)
-    );
-    const az = data.sort(
-      (a, b) => parseInt(b.price, 10) - parseInt(a.price, 10)
-    );
-    console.log("cox", cox);
-    console.log("Az", az);
+    // funcTest();
+    showAdv(data);
   });
 });
 

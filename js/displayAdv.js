@@ -17,7 +17,24 @@ const fetchData = async (url) => {
   // setStore(response);
 };
 
+// function showAdvFromLocal(item) {
+//   item = JSON.parse(localStorage.getItem("products"));
+//   console.log(item);
+
+//   showAdv(item);
+// }
+
+// showAdvFromLocal();
+
 function showAdv(response) {
+  lastAdvContainer.innerHTML = " ";
+  // let data;
+  // if (localStorage.getItem("products")) {
+  //   data = JSON.parse(localStorage.getItem("products"));
+  // } else {
+  //   data = response;
+  // }
+  // console.log(data);
   response.forEach((res) => {
     const { date, images, description, city, price, id } = res;
     const img = JSON.parse(images);
@@ -126,6 +143,11 @@ function searchValue(data) {
   });
 }
 
+// const funcTest = function () {
+//   alert("function test");
+//   console.log("fntest");
+// };
+
 function closeInputContainer() {}
 
 function Init() {
@@ -134,3 +156,5 @@ function Init() {
 }
 
 window.addEventListener("DOMContentLoaded", Init);
+
+// export { showAdv };
