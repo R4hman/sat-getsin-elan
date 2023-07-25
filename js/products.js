@@ -20,6 +20,8 @@ window.addEventListener("DOMContentLoaded", async () => {
         return item.productName.toLowerCase().trim().includes(urlId.slice(7));
       });
 
+      console.log(items);
+
       items.forEach((item) => {
         console.log(item);
         const {
@@ -32,6 +34,9 @@ window.addEventListener("DOMContentLoaded", async () => {
           productName,
         } = item;
         const img = JSON.parse(images)[0].url;
+
+        document.querySelector(".search-lists").innerHTML = "";
+
         const html = `
         <div class="premium-card">
         <a href="single-adv.html?id=${id}">
@@ -76,6 +81,10 @@ window.addEventListener("DOMContentLoaded", async () => {
         </a>
       </div>
         `;
+
+        console.log(document.querySelector(".search-lists"));
+
+        // document.querySelector(".search-lists").prepend(html);
 
         document
           .querySelector(".search-lists")

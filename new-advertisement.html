@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/selectCategory.js"></script>
     <script defer src="js/uploadImages.js"></script>
-    <script defer src="js/script.js"></script>
+    <script defer type="module" src="js/script.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -339,6 +339,7 @@
                 >Ad Soyad
 
                 <input
+                  required
                   type="text"
                   name="fullName"
                   id="fullName"
@@ -357,6 +358,7 @@
                     <option value="">(+994) 77</option>
                   </select>
                   <input
+                    required
                     type="text"
                     name="phoneNumber"
                     id="phoneNumber"
@@ -368,6 +370,7 @@
                 >Email
 
                 <input
+                  required
                   type="email"
                   name="email"
                   id="email"
@@ -378,7 +381,7 @@
               <label for="wpNumber">
                 Whatsapp nömrəniz
                 <div class="new-adv--personalInfo_phone">
-                  <select name="" id="">
+                  <select name="" id="" required>
                     <option value="">(+994) 50</option>
                     <option value="">(+994) 51</option>
                     <option value="">(+994) 55</option>
@@ -386,6 +389,7 @@
                     <option value="">(+994) 77</option>
                   </select>
                   <input
+                    required
                     type="text"
                     name="wpNumber"
                     id="wpNumber"
@@ -403,6 +407,7 @@
                 </span>
 
                 <input
+                  required
                   class="product-name--input"
                   type="text"
                   name="productName"
@@ -479,7 +484,12 @@
               <label for="subCategory"
                 >Alt kateqoriya
 
-                <input type="text" name="subCategory" id="subCategory" />
+                <input
+                  type="text"
+                  name="subCategory"
+                  id="subCategory"
+                  required
+                />
                 <svg class="adv-icon">
                   <use xlink:href="img/sprite2.svg#icon-cheveron-down"></use>
                 </svg>
@@ -487,7 +497,7 @@
               <label for="city"
                 >Şəhər
 
-                <input type="text" name="city" id="city" />
+                <input type="text" name="city" id="city" required />
                 <svg class="adv-icon">
                   <use xlink:href="img/sprite.svg#icon-search"></use>
                 </svg>
@@ -495,7 +505,7 @@
 
               <label for="">
                 Vəziyyəti
-                <select class="select-secondhand" name="" id="">
+                <select class="select-secondhand" name="" id="" required>
                   <option value="">Yeni</option>
                   <option value="">İşlənmiş</option>
                 </select>
@@ -504,7 +514,7 @@
               <label for="price"
                 >Qiymət
 
-                <input type="text" name="price" id="price" />
+                <input type="text" name="price" id="price" required />
                 <span class="currency">₼</span>
               </label>
 
@@ -521,6 +531,7 @@
               <label for="url" class="video-label">
                 Video (Youtube, Vimeo)
                 <input
+                  required
                   type="text"
                   name="url"
                   id="url"
@@ -545,7 +556,7 @@
                 </svg>
                 Maksimum 5 şəkil əlavə edə bilərsiniz
               </label>
-              <input type="file" id="img-file" />
+              <input type="file" id="img-file" required />
             </div>
             <div class="image-container"></div>
           </div>

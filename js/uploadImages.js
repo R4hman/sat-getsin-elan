@@ -50,32 +50,59 @@ function displayUploadedImages(pics) {
   console.log(images);
   pics.forEach((img, i) => {
     console.log(img.url);
+    console.log(pics.indexOf(img));
+    console.log(i);
     image = `
         <div class="upload-img" data-id="${i}">
               <img src="${img.url}" alt="" />
-              <span onclick="deleteImg(${pics.indexOf(img)}
-      
-      )">&times;</span>
+              <span class="upload-img-delete" >&times;</span>
             </div>
     `;
   });
 
-  uploadImgContainer.insertAdjacentHTML("afterbegin", image);
+  uploadImgContainer.insertAdjacentHTML("beforeend", image);
 
   //   return image;
 }
 
-function deleteImg(img) {
-  console.log("delete clicked", img);
-  images.splice(img, 1);
-  document.querySelectorAll(".upload-img").forEach((el) => {
-    if (+el.dataset.id === img) {
-      el.remove();
-    }
-  });
+const deleteSpans = document.querySelectorAll(".upload-img-delete");
+const deleteSpansCon = document.querySelector(".uploads-img .image-container");
 
-  console.log(images);
-}
+deleteSpansCon.addEventListener("click", (e) => {
+  console.log(e.target);
+  console.log(e.target.closest(".upload-img").dataset.id);
+  const id = e.target.closest(".upload-img").dataset.id;
+  console.log(e.currentTarget);
+
+  if (e.target.classList.contains("upload-img-delete")) {
+    const img = e.target.closest(".upload-img").children[0].src;
+    console.log(img);
+    images = images.filter((im) => im.url !== img);
+    console.log(images);
+
+    console.log(id);
+    console.log(document.querySelectorAll(".upload-img"));
+    console.log(deleteSpansCon.children);
+    [...deleteSpansCon.children].forEach(
+      (child) => child.children[0].src === img && child.remove()
+    );
+  }
+});
+
+// function deleteImg(img) {
+//   // console.log("target", e.target);
+//   console.log(img);
+//   console.log("delete clicked", img);
+//   // images.splice(img, 1);
+//   // images = images.filter((im, i) => i !== img);
+//   document.querySelectorAll(".upload-img").forEach((el) => {
+//     if (+el.dataset.id === img) {
+//       el.remove();
+//     }
+//   });
+
+//   console.log(images);
+// }
 
 // ADV FORM SUBMITTION
 const advButton = document.querySelector(".adv-btn");
@@ -98,7 +125,18 @@ const advButton = document.querySelector(".adv-btn");
 //   advForm.reset();
 // });
 
+console.log(document.querySelector(".header-search--form"));
+
+document
+  .querySelector(".header-search--form")
+  .addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    console.log("form submission");
+  });
+
 advButton.addEventListener("click", (e) => {
+  console.log("object clicked");
   e.preventDefault();
   const data = new FormData(advForm);
   let phoneInput =
@@ -119,27 +157,32 @@ advButton.addEventListener("click", (e) => {
   data.append("category", catVal.innerHTML.trim());
   data.append("description", advTextarea.value);
   data.append("images", JSON.stringify(images));
-  data.append("forward", false);
+  // images.length > 0 && data.append("images", JSON.stringify(images));
+  data.append("forward", JSON.parse("False".toLowerCase()));
   data.append("vip", false);
   data.append("premium", false);
   data.append("date", new Date().toLocaleDateString("en-GB"));
   for (const [name, value] of data) {
     console.log(name + ":" + value);
+
+    if (value === "" || images.length === 0) {
+      return alert("Please fill all gap. No empty value is accepted");
+    }
   }
 
   const formData = Object.fromEntries(data);
-  fetch("http://localhost:3000/products", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      // "Access-Control-Allow-Origin": "*",
-    },
-    body: JSON.stringify(formData),
-  })
-    .then((res) => res.json())
-    .then((d) => console.log(d))
-    .catch((err) => console.log(err));
-  advForm.reset();
+  // fetch("http://localhost:3000/products", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     // "Access-Control-Allow-Origin": "*",
+  //   },
+  //   body: JSON.stringify(formData),
+  // })
+  //   .then((res) => res.json())
+  //   .then((d) => console.log(d))
+  //   .catch((err) => console.log(err));
+  // advForm.reset();
 });
 
 // GET DATA FROM DATA.JSON

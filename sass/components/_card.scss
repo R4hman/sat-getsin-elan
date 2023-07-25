@@ -9,6 +9,10 @@
   //   display: flex;
   //   gap: 2rem;
 
+  @include respond(phone) {
+    margin: 0 auto;
+  }
+
   &:hover .card-side--front {
     transform: rotateY(180deg);
   }

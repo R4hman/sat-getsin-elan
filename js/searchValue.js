@@ -57,3 +57,5 @@ function Init() {
 }
 
 window.addEventListener("DOMContentLoaded", Init);
+
+export { searchValue };

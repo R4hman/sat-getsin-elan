@@ -3,9 +3,20 @@
   border: none;
   outline: none;
   background-color: var(--color-btn-main);
-  color: white;
+  color: #fff;
   padding: 11px 30px;
   border-radius: 5px;
+
+  @include respond(tab-land) {
+    // padding: 11px 15px;
+    display: inline-block;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    // flex: 1;
+    padding: 10px;
+  }
 
   span {
     @include btn-span(#fff);
@@ -55,6 +66,10 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
+    @include respond(phone) {
+      font-size: 15px;
+    }
   }
 }
 

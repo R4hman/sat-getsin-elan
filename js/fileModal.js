@@ -77,7 +77,7 @@ const patchData = async function (type) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        [type]: "true",
+        [type]: true,
       }),
     })
       .then((response) => response.json())
@@ -269,7 +269,8 @@ window.addEventListener(
           vip,
           wpNumber,
         } = product[0];
-        // console.log(url);
+
+        console.log(url);
         priceSpan.innerText = price;
         productTitle;
         owner.innerText = fullName;
@@ -295,6 +296,7 @@ window.addEventListener(
         // console.log(productVideo);
         // console.log(url);
         productVideo.setAttribute("src", url);
+        // productVideo.href = url;
         // console.log(productVideo);
 
         //   centerDOM.innerHTML = `

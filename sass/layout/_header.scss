@@ -8,6 +8,11 @@
       padding-top: 25px;
       padding-bottom: 25px;
       align-items: center;
+
+      @include respond(phone) {
+        flex-direction: column;
+        gap: 5rem;
+      }
     }
 
     &--left {
@@ -16,20 +21,37 @@
       align-items: center;
       justify-content: flex-start;
 
+      @include respond(tab-port) {
+        flex: 3;
+      }
+
       ul {
         display: flex;
+        align-items: center;
 
         li {
           list-style: none;
 
           &:nth-child(2) {
             margin-left: 1rem;
+
+            @include respond(tab-port) {
+              margin-left: 0.3rem !important;
+            }
           }
           &:nth-child(3) {
             margin-left: 6rem !important;
+
+            @include respond(tab-port) {
+              margin-left: 3rem !important;
+            }
           }
           &:nth-child(4) {
             margin-left: 8rem;
+
+            @include respond(tab-port) {
+              margin-left: 5rem !important;
+            }
           }
         }
       }
@@ -65,6 +87,10 @@
       gap: 1rem;
       color: var(--color-subheader-main);
 
+      @include respond(tab-land) {
+        font-size: 10px;
+      }
+
       @include small-typography-style(500);
       letter-spacing: 0em;
       text-align: left;
@@ -80,6 +106,20 @@
       align-items: center;
       justify-content: space-between;
       gap: 4rem;
+      flex-wrap: wrap;
+      align-content: center;
+
+      @include respond(tab-land) {
+        gap: 6rem;
+      }
+
+      @include respond(tab-port) {
+        gap: 4rem;
+      }
+      @include respond(phone) {
+        flex-direction: column;
+        gap: 3rem;
+      }
 
       .wishlist {
         @include flex-gap();
@@ -104,11 +144,16 @@
     .toggle {
       cursor: pointer;
       &-icon {
-        width: 2000px;
         height: 20px;
         color: var(--color-btn-main);
         display: none;
         width: 20px;
+
+        @include respond(tab-port) {
+          height: 16px;
+          width: 16px;
+          fill: blueviolet;
+        }
 
         &.active {
           display: block;
@@ -122,6 +167,10 @@
       line-height: 18px;
       letter-spacing: 0.05em;
       text-align: left;
+
+      @include respond(tab-port) {
+        font-size: 12px;
+      }
     }
 
     &--form {
@@ -130,6 +179,15 @@
       justify-content: space-between;
       background-color: white;
       width: 45rem;
+
+      @include respond(tab-land) {
+        width: 33rem;
+      }
+
+      @include respond(tab-port) {
+        width: 20rem; //1rem = 9px = 56.25
+      }
+
       input {
         border: none;
         outline: none;
@@ -137,8 +195,16 @@
         border-left: 1px solid var(--color-border-main);
         width: 100%;
 
+        @include respond(tab-port) {
+          font-size: 12px;
+        }
+
         &::placeholder {
           @include small-typography-style(400);
+
+          @include respond(tab-port) {
+            font-size: 12px;
+          }
         }
       }
     }

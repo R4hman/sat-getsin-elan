@@ -5,11 +5,17 @@ const searchInput = document.getElementById("search-input");
 const inputResultContainer = document.querySelector(".input-result-container");
 const headerSearchForm = document.querySelector(".header-search--form");
 const lastSearches = document.querySelector(".last-searches");
+const categoryLists = document.querySelector(".category-lists");
+const categoryList = document.querySelector(".category-list");
 
 const optionMenu = document.querySelector(".select-menu"),
   selectBtn = document.querySelector(".select-btn"),
   options = document.querySelectorAll(".option"),
   btnText = document.querySelector(".select-city");
+
+// İMPORTS
+
+import { showAdv } from "./showAdv.js";
 
 //CATEGORY SELECTION
 const CategoryOptionMenu = document.querySelector(".select-menu-category"),
@@ -166,24 +172,54 @@ function displayRecentSearch() {
 //   });
 // });
 
+async function createCategoryList() {
+  const data = await fetch("http://localhost:3000/categories");
+  const res = await data.json();
+
+  res.forEach((cat) => {
+    // console.log(cat.name.toLowerCase().split(" ").join("-"));
+
+    // if (cat.name === "Xidmətlər") {
+    //   console.log("yes it is Xidmetler");
+    // } else if (cat.name === "Nəqliyyat") {
+    //   console.log("it is neqliyyat");
+    // } else if (cat.name === "Uşaq aləmi") {
+    //   console.log("it is usaq");
+    //   cat.name = "Usaq alemi";
+    // }
+
+    const html = `
+      <div class="category-list">
+      <a href="advertisement.html?id=${cat["name-eng"]
+
+        .toLowerCase()
+        .split(" ")
+        .join("-")
+        .replace(",", "")
+        .replaceAll("ə", "e")}">
+    <div class="category-list--img-container">
+      <img src="${cat.url}" alt="" />
+    </div>
+      <h3>${cat.name}</h3>
+      </a>
+  </div>
+    `;
+    categoryLists.insertAdjacentHTML("afterbegin", html);
+  });
+}
+
 const dropdownLatest = document.querySelector(".dropdown-latest");
-console.log(dropdownLatest);
 
 const spanFilters = document.querySelectorAll(".content-latest span");
 
 spanFilters.forEach((sp) => {
-  // console.log(sp);
   sp.addEventListener("click", (e) => {
-    console.log(sp.dataset.id);
     let data = getStorageItem("products");
 
     if (sp.dataset.id === "newest") {
-      console.log("it is newest");
-      console.log(new Date(data[1].date).getTime());
       data = data.sort(
         (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
       );
-      console.log(data);
     }
     // console.log(data);
 
@@ -196,19 +232,40 @@ spanFilters.forEach((sp) => {
     }
 
     setStorage("products", data);
-    console.log(data);
+
+    let el;
+    let key;
+    if (sp.closest(".section-vip-adv")) {
+      el = sp.closest(".section-vip-adv").querySelector(".premium-lists");
+      key = "vip";
+      console.log(el);
+    } else if (sp.closest(".section-last-adv")) {
+      el = sp.closest(".section-last-adv").querySelector(".premium-lists");
+
+      key = "forward";
+    } else if (sp.closest(".index-premium")) {
+      el = sp.closest(".index-premium").querySelector(".premium-lists");
+      // el = sp.closest(".index-premium").querySelector(".premium-lists");
+      // console.log(el);
+      key = "premium";
+      console.log(el);
+    }
+
+    // console.log(el);
 
     // funcTest();
-    showAdv(data);
+    showAdv(data, el, key);
   });
 });
+
+// PRICE INPUT FUNCTION
 
 //  FETCH DATA AND SAVE TO LOCAL STORAGE
 
 const fetchAndSaveLocalStorage = async function (url) {
   const data = await fetch(url);
   const res = await data.json();
-  console.log(res);
+
   setStorage("products", res);
 };
 
@@ -230,6 +287,9 @@ function setStorage(name, item) {
 function init() {
   displayRecentSearch();
   fetchAndSaveLocalStorage("http://localhost:3000/products");
+  if (categoryLists) {
+    createCategoryList();
+  }
 }
 
 document.addEventListener("DOMContentLoaded", init);

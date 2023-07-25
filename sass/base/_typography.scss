@@ -3,6 +3,13 @@
   height: 20px;
   width: 20px;
   color: var(--color-subheader-main) !important;
+
+  @include respond(tab-port) {
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    fill: red;
+  }
 }
 
 .section-title {
@@ -13,6 +20,11 @@
   text-align: left;
   color: var(--color-title-main);
   margin-bottom: 2.5rem;
+
+  @include respond(phone) {
+    text-align: center;
+    font-size: 3.2rem;
+  }
 }
 
 .footer-main--title {
